@@ -57,7 +57,7 @@
     function toggleCheck(person, button, checkCell) {
       const newCheckUp = !person.check_up;
 
-      fetch("http://localhost:5000/api/update_check", {
+      fetch("https://dylan12032003.pythonanywhere.com/api/update_check", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -198,7 +198,7 @@
 
   const newCheck = !person.check_up;
 
-  fetch("http://localhost:5000/api/update_check", {
+  fetch("https://dylan12032003.pythonanywhere.com/api/update_check", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -250,7 +250,7 @@
   const confirmReset = confirm("Bạn có chắc muốn reset tất cả điểm danh về mặc định ❌?");
   if (!confirmReset) return;
 
-  fetch("http://localhost:5000/api/reset_check", {
+  fetch("https://dylan12032003.pythonanywhere.com/api/reset_check", {
     method: "POST"
   })
   .then(res => res.json())
@@ -268,7 +268,7 @@
   });
 }
     function exportVang() {
-  fetch("http://localhost:5000/api/export_vang", {
+  fetch("https://dylan12032003.pythonanywhere.com/api/export_vang", {
     method: "GET"
   })
   .then(res => res.blob())
@@ -287,7 +287,7 @@
   });
 }
     function exportComat() {
-  fetch("http://localhost:5000/api/export_comat", {
+  fetch("https://dylan12032003.pythonanywhere.com/api/export_comat", {
     method: "GET"
   })
   .then(res => res.blob())
